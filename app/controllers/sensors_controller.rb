@@ -46,6 +46,7 @@ class SensorsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def sensor_params
-      params.require(:sensor).permit(:name, :value)
+      res = ActiveModelSerializers::Deserialization.jsonapi_parse(params)
+      res
     end
 end
