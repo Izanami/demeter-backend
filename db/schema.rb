@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160803185601) do
+ActiveRecord::Schema.define(version: 20160806210759) do
 
   create_table "logs", force: :cascade do |t|
     t.float    "value"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20160803185601) do
     t.string   "unit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float    "minimal"
+    t.float    "maximum"
   end
 
 end
