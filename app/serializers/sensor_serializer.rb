@@ -1,3 +1,3 @@
 class SensorSerializer < ActiveModel::Serializer
-  attributes :id, :name, :value
+  attributes :id, :name, :unit, :last
 end

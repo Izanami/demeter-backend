@@ -6,4 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Sensor.create(name: 'Temperature', value: 20.0)
+sensor = Sensor.create(name: 'Empty', unit: 'n/a')
+Log.create(value: 42.5, sensor: sensor)
+Log.create(value: 10, sensor: sensor)
+Log.create(value: 42.5, sensor: sensor)

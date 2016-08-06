@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160802164528) do
+ActiveRecord::Schema.define(version: 20160803185601) do
+
+  create_table "logs", force: :cascade do |t|
+    t.float    "value"
+    t.integer  "sensor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sensor_id"], name: "index_logs_on_sensor_id"
+  end
 
   create_table "sensors", force: :cascade do |t|
     t.string   "name"
-    t.float    "value"
+    t.string   "unit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
